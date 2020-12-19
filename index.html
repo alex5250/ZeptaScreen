@@ -118,7 +118,16 @@
          // console.error = msg => logElem.innerHTML += `<span class="error">${msg}</span><br>`;
          // console.warn = msg => logElem.innerHTML += `<span class="warn">${msg}<span><br>`;
          //console.info = msg => logElem.innerHTML += `<span class="info">${msg}</span><br>`;
-          function start() {
+          function generatePassword() {
+    var length = 8,
+        charset = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789",
+        retVal = "";
+    for (var i = 0, n = charset.length; i < length; ++i) {
+        retVal += charset.charAt(Math.floor(Math.random() * n));
+    }
+    return retVal;
+}
+         function start() {
          
          recorder.start();
          alert("Started recording");
@@ -128,7 +137,7 @@
           alert("Stopped recording");
          }
          function download() {
-          recorder.save('screen_record.mp4');
+          recorder.save(+generatePassword(8)+'.mp4');
          }
          async function startCapture() {
          
