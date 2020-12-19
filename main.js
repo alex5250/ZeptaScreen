@@ -79,7 +79,7 @@ function CanvasRecorder(canvas, video_bits_per_sec) {
     }
 
     function download(file_name) {
-        const name = file_name || 'recording.webm';
+        const name = file_name || 'recording.mp4';
         const blob = new Blob(recordedBlobs, { type: supportedType });
         const url = window.URL.createObjectURL(blob);
         const a = document.createElement('a');
