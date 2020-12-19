@@ -85,7 +85,7 @@
          </footer>
       </div>
       <script type="text/javascript">
-         var options = {mimeType: 'video/mp4;codecs=h264'}; 
+         var options = {mimeType: 'video/mpeg;codecs=h264'}; 
             const canvas = document.getElementById('video');
          const recorder = new CanvasRecorder(canvas,45000000);
          
@@ -128,7 +128,7 @@
           alert("Stopped recording");
          }
          function download() {
-          recorder.save('screen_record.webm');
+          recorder.save('screen_record.mp4');
          }
          async function startCapture() {
          
