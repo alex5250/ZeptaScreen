@@ -1,105 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-   <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Web Record APP</title>
-      <script type="text/javascript" src="main.js"></script>
-	  <style type="text/css" src="dark.css"><style>
-      <style type="text/css" src="https://cdn.jsdelivr.net/npm/cirrus-ui@0.5.5/dist/cirrus.min.css"></style>
-      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css"  crossorigin="anonymous">
-      <nav class="navbar" role="navigation" aria-label="main navigation">
-         <div class="navbar-brand">
-            <h1 style="">ZeptaScreen </h1>
-            <style type="text/css" media="screen">
-               h1 {
-               font-size:30px; 
-               text-align: center;
-               margin-left: auto;
-               margin-right: auto;
-               width: 50em;
-               }
-            </style>
-            </a>
-            </a>
-         </div>
-      </nav>
-      <div class="card">
-         <header class="card-header">
-            <a href="#" class="card-header-icon" aria-label="more options">
-            <span class="icon">
-            <i class="fas fa-angle-down" aria-hidden="true"></i>
-            </span>
-            </a>
-         </header>
-         <div class="card-content">
-            <div class="content">
-               </p>
-               <video id="video" autoplay></video>
-               <style>
-                  #video {
-                  margin-left: auto;
-                  margin-right: auto;
-                  display: block
-                  }
-               </style>
-               <br>
-            </div>
-         </div>
-         <style>
-            .button {
-            margin: 10px;
-            }
-            .log {
-            visibility: hidden;
-            }
-         </style>
-         <footer class="card-footer">
-            <div class="field is-grouped" id="centrerd">
-               <p class="control">
-                  <button class="button is-link" id="start">
-                  Select window
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Webapp</title>
+	 <script type="text/javascript" src="main.js"></script>
+</head>
+<body>
+	     <video id="video" autoplay></video>
+
+	       <button class="button is-link" id="start">
+                  <h1>Select window</h1>
                   </button>
                   <button class="button is-link" id="stop">
-                  Stop
+                  <h1>Stop</h1>
                   </button>
-               </p>
-               <p class="control" onclick="start()">
-                  <button class="button">
-                  Start
+
+
+             
+                  <button class="button" onclick="start()">
+                  <h1>Start</h1>
                   </button>
-               </p>
-               <br>
-               <p class="control" onclick="download()">
-                  <button class="button is-danger">
-                  Downland ↓
+
+               
+                  <button  onclick="download()" class="button is-danger">
+                  <h1>Downland ↓</h1>
                   </button>
-               </p>
-            </div>
-            <style>
-               #centrerd {
-               margin: auto;
-               width: 50%;
-               padding: 10px;
-               }
-			   .card {
-
-background-color:#282828;
-}
-.navbar {
-background-color:#282828;
-
-}
-h1 {
-color :#ffffff;
- font-weight: bold;
-}
+             
 
 
-            </style>
-         </footer>
-      </div>
-      <script type="text/javascript">
+
+</body>
+
+ <script type="text/javascript">
          var options = {mimeType: 'video/mpeg;codecs=h264'}; 
             const canvas = document.getElementById('video');
          const recorder = new CanvasRecorder(canvas,45000000);
@@ -186,21 +119,4 @@ color :#ffffff;
           console.info(JSON.stringify(videoTrack.getConstraints(), null, 2));
          }
       </script>
-      <style>
-      #video {
-      border: 1px solid #999;
-      width: 98%;
-      max-width: 860px;
-      }
-      .error {
-      color: red;
-      }
-      .warn {
-      color: orange;
-      }
-      .info {
-      color: darkgreen;
-      }
-      <style>
-      </body>
 </html>
